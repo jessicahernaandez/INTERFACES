@@ -50,5 +50,7 @@ public class Main {
         System.out.println("Modulo de la división: " + calcu2.modulo(num1, num2));
         System.out.println("Potencia: " + calcu2.potencia(num1, num2));
         System.out.println("***********************************************************************");
+        
+        System.out.println("Nuevo comentario");
     }
 }
