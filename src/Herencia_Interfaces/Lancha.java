@@ -6,7 +6,7 @@ public class Lancha implements Navegable {
 
     @Override
     public void flotar() {
-        System.out.println("Lancha Flotando...");
+        System.out.println("La lancha esta flotando...");
     }
     
     
