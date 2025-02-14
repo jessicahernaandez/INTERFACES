@@ -75,7 +75,7 @@ public class Lista {
 
     /*Añadir al final de la lista, los elementos de otra lista que se pasa como parámetro*/
     public void insertarElementosLista(Integer[] otraLista) {
-        
+        //Hacer casting para asegurar 
         
         
 
