@@ -1,4 +1,5 @@
-/**/
+/*Son los mismos métodos que Lista, a diferencia que, implementa una Interfaz llamada Cola
+-> Implementación de 2 métodos nuevos*/
 package Encolar_Desencolar;
 
 import java.util.Arrays;
