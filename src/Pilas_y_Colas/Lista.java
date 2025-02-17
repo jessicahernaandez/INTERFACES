@@ -76,6 +76,7 @@ public class Lista {
         numLista = Arrays.copyOf(numLista, numLista.length + numElementosOtraLista);
 
         //Copiamos los elementos de la otraLista desde el indice de destino -> contadornumLista
+        //Accedemos a el array de la lista pasada como parámero.
         System.arraycopy(otraLista.numLista, 0, numLista, contadornumLista, numElementosOtraLista);
 
         contadornumLista = numLista.length;
