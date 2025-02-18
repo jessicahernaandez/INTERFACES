@@ -27,9 +27,10 @@ public class Main {
         System.out.println("Haz introducido el \'-1\'");
         System.out.println("Desencolando la lista...");
         int longitud = lista1.getnumElementos();
-        for (int i = 0; i <= longitud; i++) {
+
+        
             lista1.desencolar();
-        }
+        
 
     }
 

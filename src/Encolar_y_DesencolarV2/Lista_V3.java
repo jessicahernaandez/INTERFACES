@@ -4,10 +4,7 @@ package Encolar_y_DesencolarV2;
 
 import java.util.Arrays;
 
-/**
- *
- * @author jessica.herriv
- */
+
 public class Lista_V3 implements Cola2 {
 
     //Datos de la clase
@@ -24,9 +21,7 @@ public class Lista_V3 implements Cola2 {
     @Override
     /*Inserta los elementos al final de la cola*/
     public void encolar(Integer o) {
-       numLista = Arrays.copyOf(numLista, numLista.length + 1);
-       numLista[contadornumLista] = o;
-       contadornumLista++;
+       insertaNumFinal(o);
     }
 
     @Override
@@ -34,16 +29,11 @@ public class Lista_V3 implements Cola2 {
     public Integer desencolar() {
         
         /*Obtenemos el valor del indice 0 (el primero) para poder devolverlo*/
-        Integer nuevoElemento = numLista[0];
+        Integer nuevoElemento = devolverElemento(0);
         
-        /*Desplazamos los elementos desde el indice 1 a 0*/
-        System.arraycopy(numLista, 1, numLista, 0, numLista.length - 1);
-        
-        /*Una vez despalzados, eliminamos el último elemento.*/
-        numLista = Arrays.copyOf(numLista, numLista.length - 1);
+        eliminaElemento(0);
         
         return nuevoElemento;
-        
     }
     
     /*******************************************************************************************************************/
@@ -119,15 +109,15 @@ public class Lista_V3 implements Cola2 {
     //Eliminar un elemento con el índice que se pasa como parámetro
     public void eliminaElemento(int IndiceEliminacion) {
 
-        if (IndiceEliminacion < 0 || IndiceEliminacion > contadornumLista) {
+        if (IndiceEliminacion < 0 && IndiceEliminacion > numLista.length) {
             System.out.println("El Indice especificado no es válido");
         } else {
-            for (int i = IndiceEliminacion; i < contadornumLista - 1; i++) {
+            for (int i = IndiceEliminacion + 1; i < numLista.length; i++) {
                 //Movemos los elementos en cada iteracion
-                numLista[i] = numLista[i + 1];
+                numLista[i - 1] = numLista[i];
             }
 
-            numLista = Arrays.copyOf(numLista, contadornumLista - 1);
+            numLista = Arrays.copyOf(numLista, numLista.length - 1);
             contadornumLista--;
         }
     }
@@ -157,8 +147,9 @@ public class Lista_V3 implements Cola2 {
     }
 
     //Mostrar los elementos de la lista por consola
-    public void mostrarElementos() {
-        System.out.println("Lista: " + Arrays.toString(numLista));
+    @Override
+    public String toString() {
+        return "Lista: " + Arrays.toString(numLista);
     }
 
 
