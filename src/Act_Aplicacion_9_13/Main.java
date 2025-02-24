@@ -14,7 +14,7 @@ public class Main {
             new Futbolista ("B06758171", "Jessica", 20, 15),
             new Futbolista ("A56450923", "Cynthia", 29, 25),
             new Futbolista ("38478251Z", "Andrea", 15, 20),
-            new Futbolista ("J63883847", "Liza", 24, 10),
+            new Futbolista ("J63883847", "Liza", 20, 10),
             new Futbolista ("38473742K", "Alba", 25, 5),
         };
         
@@ -46,6 +46,12 @@ public class Main {
         System.out.println("Futbolistas ordenados de manera creciente por su edad: \n" + Arrays.deepToString(futbolistas));
         Arrays.sort(futbolistas,c3D);
         System.out.println("Futbolistas ordenados de manera decreciente por su edad: \n" + Arrays.deepToString(futbolistas));
+        
+        //Llamamos el nuevo método
+        Comparator c4 = new ComparaEdadesOnombres();
+        Arrays.sort(futbolistas, c4);
+        System.out.println("Comparando si hay edades iguales, se compara a nombres: \n" + Arrays.deepToString(futbolistas));
     }
+    
     
 }
