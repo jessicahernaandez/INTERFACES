@@ -21,6 +21,5 @@ public class Main {
         } else {
             System.out.println("Los dos tienen el mismo id");
         }
-
     }
 }
