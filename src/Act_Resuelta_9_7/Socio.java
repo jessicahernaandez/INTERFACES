@@ -25,7 +25,7 @@ public class Socio implements Comparable {
     int edad () {
         /*El metodo fechaNacimiento.until(LocalDate.now(),ChronoUnit.YEARS); calcula la cantidad de años entre
         fecha de nacimiento y la fecha actual.
-        -> fechaNacimiento.until() devielve un entero long, demasiado largo.
+        -> fechaNacimiento.until() devuelve un entero long, demasiado largo.
         -> ChronoUnit.YEARS especifica que queremos calcular diferencia en años
         -> La conversion a cast es para acortar en entero largo que devuelve*/
         return (int)fechaNacimiento.until(LocalDate.now(),ChronoUnit.YEARS);
